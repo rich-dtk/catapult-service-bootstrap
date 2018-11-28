@@ -81,8 +81,7 @@ module Catapult
       end
       
       def peer_publickey(peer)
-        (self.ndx_public_keys[peer.type] || {})[peer.index] || 
-          fail("Unexpected that there is no public key for '#{peer.type}-#{peer.index}'")
+        'EBC3D1CC6FC458442AFBC73C1D69D8B09FB1B38ECD243F6AF243536815198E98'
       end
       
       def ret_ndx_public_keys

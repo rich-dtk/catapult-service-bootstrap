@@ -17,9 +17,9 @@ module Catapult
       def initialize(type, index)
         @type         = type
         @index        = index
-        @host_address = Global.component_address(type, index)
+        @host_address = 'rich-direct.memcore.io'
+        @port         = 31861
         @host         = self.class.host(type, index)
-        @port         = self.class.port(type)
         @name         = self.class.name(type, index)
       end
       private :initialize
@@ -28,13 +28,7 @@ module Catapult
       
       TYPES = [:api_node, :peer_node]
       def self.all_peers(input_attributes)
-        peers = []
-        TYPES.each do |type|
-          (0..Config.cardinality(type)-1).to_a.each do |index|
-            peers << Peer.new(type, index)
-          end
-        end
-        peers
+        [Peer.new(:peer_node, 0)]
       end
       
       def self.host(type, index)

@@ -26,7 +26,6 @@ module Catapult
       def initialize(input_attributes)
         type            = self.class.type
         all_peers       = Peer.all_peers(input_attributes)
-
         @component_keys = Keys::Component.new(input_attributes)
         @json_peers     = JsonPeers.new(@component_keys, all_peers)
         super(type, input_attributes, TemplateAttributes.new(type, @component_keys, input_attributes))

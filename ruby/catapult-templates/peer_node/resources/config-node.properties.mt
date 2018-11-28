@@ -76,9 +76,6 @@ extension.zeromq = false
 
 # p2p extensions
 extension.eventsource = true
-{{#harvesting_is_on}}
-extension.harvesting = true
-{{/harvesting_is_on}}
 extension.syncsource = true
 
 # common extensions

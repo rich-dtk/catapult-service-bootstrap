@@ -1,4 +1,4 @@
 [harvesting]
 harvestKey = {{harvest_key}}
-isAutoHarvestingEnabled = true
+isAutoHarvestingEnabled = false
 maxUnlockedAccounts = 5
