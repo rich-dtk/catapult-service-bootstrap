@@ -74,6 +74,8 @@ services:
     build: dockerfiles/catapult
 #    command: bash -c "/bin-mount/wait /state/peer-node-0-nemgen && /bin/bash /userconfig/startServer.sh"
     command: bash -c "sleep 1000000"
+    dns:
+    - 10.96.0.10
     stop_signal: SIGINT
     volumes:
     - ./build/catapult-config/peer-node-0/userconfig/resources/:/userconfig/resources/
