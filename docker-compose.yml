@@ -15,6 +15,17 @@
 
 version: '2'
 services:
+  openvpn-client: 
+    build: dockerfiles/openvpn-client
+    command: openvpn --config /client/rich.ovpn
+    privileged: true
+    extra_hosts:
+    - "vpn.my.fqdn:172.31.7.236"
+    dns:
+    - 10.96.0.10
+    volumes:
+    - ./client:/client
+
   ######  dynamic configuration  ###########
 
   generate-raw-addresses:
