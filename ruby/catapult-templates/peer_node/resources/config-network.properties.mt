@@ -8,9 +8,9 @@ generationHash = {{network_generation_hash}}
 
 shouldEnableVerifiableState = {{should_enable_verifiable_state}}
 shouldEnableVerifiableReceipts = {{should_enable_verifiable_receipts}}
-
 currencyMosaicId = {{{currency_mosaic_id}}}
 harvestingMosaicId = {{{harvesting_mosaic_id}}}
+
 blockGenerationTargetTime = 15s
 blockTimeSmoothingFactor = 3000
 
@@ -21,8 +21,12 @@ maxDifficultyBlocks = 60
 maxTransactionLifetime = 24h
 maxBlockFutureTime = 10s
 
+initialCurrencyAtomicUnits = 8'999'999'998'000'000
+maxMosaicAtomicUnits = 9'000'000'000'000'000
+
 totalChainImportance = {{{total_chain_importance}}}
 minHarvesterBalance = 1'000
+harvestBeneficiaryPercentage = 10
 
 blockPruneInterval = 360
 maxTransactionsPerBlock = 200'000
@@ -48,7 +52,7 @@ maxHashLockDuration = 2d
 [plugin:catapult.plugins.locksecret]
 
 maxSecretLockDuration = 30d
-minProofSize = 10
+minProofSize = 1
 maxProofSize = 1000
 
 [plugin:catapult.plugins.mosaic]
@@ -59,9 +63,8 @@ maxMosaicDuration = 3650d
 
 isMosaicLevyUpdateAllowed = true
 maxMosaicDivisibility = 6
-maxMosaicDivisibleUnits = 9'000'000'000'000'000
 
-mosaicRentalFeeSinkPublicKey = CCAEE9D1FBD5D022E42377EE3AF60455F29DDFE1FF2FA54CA1E172E9AB6D5D3F
+mosaicRentalFeeSinkPublicKey = {{mosaic_rental_fee_sink_public_key}}
 mosaicRentalFee = 500'000'000
 
 [plugin:catapult.plugins.multisig]
@@ -79,9 +82,9 @@ maxNamespaceDuration = 365d
 namespaceGracePeriodDuration = 0d
 reservedRootNamespaceNames = xem, nem, user, account, org, com, biz, net, edu, mil, gov, info
 
-namespaceRentalFeeSinkPublicKey = CCAEE9D1FBD5D022E42377EE3AF60455F29DDFE1FF2FA54CA1E172E9AB6D5D3F
+namespaceRentalFeeSinkPublicKey = {{namespace_rental_fee_sink_public_key}}
 rootNamespaceRentalFeePerBlock = 1'000'000
-childNamespaceRentalFee = 1'000'000
+childNamespaceRentalFee = 100'000'000
 
 maxChildNamespaces = 500
 
