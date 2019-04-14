@@ -1,18 +1,18 @@
 [extensions]
 
 # api extensions
-extension.filespooling = false
-extension.partialtransaction = false
+extension.filespooling = true
+extension.partialtransaction = true
 
 # addressextraction must be first because mongo and zeromq depend on extracted addresses
-extension.addressextraction = false
-extension.mongo = false
-extension.zeromq = false
+extension.addressextraction = true
+extension.mongo = true
+extension.zeromq = true
 
 # p2p extensions
-extension.eventsource = true
-extension.harvesting = true
-extension.syncsource = true
+# extension.eventsource = true
+# extension.harvesting = true
+# extension.syncsource = true
 
 # common extensions
 extension.diagnostics = true
