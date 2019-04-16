@@ -1,19 +1,21 @@
 #!/bin/bash
+
 ulimit -c unlimited
+cd /catapult
+id -a
 ls -alh /data
 
-if [ -f /userconfig/prepare.sh ]
-then
-        if [ -z "$(grep 'catapult.*server' /userconfig/prepare.sh)" ]; then
-                echo "proper server must be started via userconfig/prepare.sh"
-                read -p "press enter to exit"
-                exit 1
-        fi
-
-        exec /bin/bash /userconfig/prepare.sh
-else
-        echo "userconfig/prepare.sh not found"
-        read -p "press enter to exit"
-        exit 2
+if [ ! -d /data ]; then
+  echo "/data directory does not exist"
+  exit 1
 fi
 
+if [ ! -d /data/00000 ]; then
+  echo "data directory is empty, initializing"
+  cp -r seed/testnet/* /data*
+  echo -ne "\01\0\0\0\0\0\0\0" > /data/index.dat
+fi
+
+cd /data
+rm /data/startup/mongo-initialized
+touch /data/startup/datadir-initialized
