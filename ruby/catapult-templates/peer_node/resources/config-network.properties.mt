@@ -8,6 +8,7 @@ generationHash = {{network_generation_hash}}
 
 shouldEnableVerifiableState = {{should_enable_verifiable_state}}
 shouldEnableVerifiableReceipts = {{should_enable_verifiable_receipts}}
+
 currencyMosaicId = {{{currency_mosaic_id}}}
 harvestingMosaicId = {{{harvesting_mosaic_id}}}
 
@@ -25,7 +26,7 @@ initialCurrencyAtomicUnits = 8'999'999'998'000'000
 maxMosaicAtomicUnits = 9'000'000'000'000'000
 
 totalChainImportance = {{{total_chain_importance}}}
-minHarvesterBalance = 1'000
+minHarvesterBalance = 500
 harvestBeneficiaryPercentage = 10
 
 blockPruneInterval = 360
