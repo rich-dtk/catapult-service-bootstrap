@@ -23,7 +23,8 @@ module Catapult
         end
 
         # TODO: this should be calculeted
-        TOTAL_CHAIN_IMPORTANCE = "15'000'000" # the sum of the currency harvesting amounts should be a power of ten of this
+        # TOTAL_CHAIN_IMPORTANCE = "15'000'000" # the sum of the currency harvesting amounts should be a power of ten of this
+        TOTAL_CHAIN_IMPORTANCE = "8'000'000" # the sum of the currency harvesting amounts should be a power of ten of this
 
         CURRENCY_MOSAIC_ID     = "0x5B6B'5282'5A09'2704" # this get overwritten so the exact value makes no difference
         HARVESTING_MOSAIC_ID   = "0x468A'5847'D783'45DA" # this get overwritten so the exact value makes no difference
