@@ -17,7 +17,8 @@ if [ ! -d /data/00000 ]; then
    exit 1
 fi
 
-if [ ! -f /data/index.dat]; then
+if [ ! -f '/data/index.dat' ]; then
+  echo "No index.dat file, creating now...."
   echo -ne "\01\0\0\0\0\0\0\0" > /data/index.dat
 fi
 
