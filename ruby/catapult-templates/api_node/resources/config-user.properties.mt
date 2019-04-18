@@ -4,5 +4,5 @@ bootKey = {{bootkey}}
 
 [storage]
 
-dataDirectory = ../data
-pluginsDirectory = .
+dataDirectory = /data
+pluginsDirectory = 

@@ -4,5 +4,5 @@
 harvestKey = {{harvest_key}}
 isAutoHarvestingEnabled = false
 maxUnlockedAccounts = 5
-beneficiary = {{beneficiary}}
+beneficiary = {{harvest_key}}
 
