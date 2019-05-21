@@ -18,7 +18,6 @@ extension.syncsource = true
 
 # common extensions
 extension.diagnostics = true
-extension.filechain = true
 extension.hashcache = true
 extension.networkheight = true
 extension.nodediscovery = true
