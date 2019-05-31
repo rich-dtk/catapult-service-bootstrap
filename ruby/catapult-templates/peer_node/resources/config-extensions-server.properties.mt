@@ -1,8 +1,8 @@
 [extensions]
 
 # api extensions
-# extension.filespooling = false
-# extension.partialtransaction = false
+extension.filespooling = false
+extension.partialtransaction = false
 
 # addressextraction must be first because mongo and zeromq depend on extracted addresses
 extension.addressextraction = false

@@ -22,7 +22,7 @@ maxDifficultyBlocks = 60
 maxTransactionLifetime = 24h
 maxBlockFutureTime = 10s
 
-initialCurrencyAtomicUnits = 8'999'999'998'000'000
+initialCurrencyAtomicUnits = 8'998'999'998'000'000
 maxMosaicAtomicUnits = 9'000'000'000'000'000
 
 totalChainImportance = {{total_chain_importance}}
@@ -45,6 +45,8 @@ maxCosignaturesPerAggregate = 15
 enableStrictCosignatureCheck = false
 enableBondedAggregateSupport = true
 
+maxBondedTransactionLifetime = 48h
+
 [plugin:catapult.plugins.lockhash]
 
 lockedFundsPerAggregate = 10'000'000
@@ -59,10 +61,7 @@ maxProofSize = 1000
 [plugin:catapult.plugins.mosaic]
 
 maxMosaicsPerAccount = 10'000
-
 maxMosaicDuration = 3650d
-
-isMosaicLevyUpdateAllowed = true
 maxMosaicDivisibility = 6
 
 mosaicRentalFeeSinkPublicKey = {{mosaic_rental_fee_sink_public_key}}
