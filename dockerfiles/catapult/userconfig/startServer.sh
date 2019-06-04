@@ -27,4 +27,15 @@ mkdir -p startup
 rm -f /data/startup/mongo-initialized
 touch /data/startup/datadir-initialized
 
+
+if [ -e "/data/server.lock" ]; then
+  echo "!!!! Have lock file present, going to run recovery...."
+  exec /catapult/bin/catapult.recovery /userconfig
+  echo "!!!! Finished running recovery, should be moving on to start server..."
+else
+  echo "!!!! DO NOT HAVE ANY LOCk FILE.."
+fi
+
+echo "!!!! Going to start server now...."
+
 exec /catapult/bin/catapult.server /userconfig
