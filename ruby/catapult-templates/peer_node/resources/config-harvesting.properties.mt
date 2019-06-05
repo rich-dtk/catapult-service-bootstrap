@@ -4,5 +4,4 @@
 harvestKey = {{harvest_key}}
 isAutoHarvestingEnabled = true
 maxUnlockedAccounts = 5
-beneficiary = {{harvest_key}}
-
+beneficiary = AA68E94ABDA8412882ACA2598DAD4C6222062455B7BAF966232AAD96CC364467 

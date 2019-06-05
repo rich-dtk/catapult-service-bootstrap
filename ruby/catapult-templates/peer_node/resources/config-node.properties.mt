@@ -24,7 +24,7 @@ unconfirmedTransactionsCacheMaxResponseSize = 20MB
 unconfirmedTransactionsCacheMaxSize = 1'000'000
 
 connectTimeout = 10s
-syncTimeout = 120s
+syncTimeout = 60s
 
 socketWorkingBufferSize = 512KB
 socketWorkingBufferSensitivity = 100
