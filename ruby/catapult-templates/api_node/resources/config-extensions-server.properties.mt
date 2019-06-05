@@ -5,14 +5,14 @@ extension.filespooling = true
 extension.partialtransaction = true
 
 # addressextraction must be first because mongo and zeromq depend on extracted addresses
-extension.addressextraction = true
-extension.mongo = true
-extension.zeromq = true
+extension.addressextraction = false
+extension.mongo = false
+extension.zeromq = false
 
 # p2p extensions
-# extension.eventsource = true
-# extension.harvesting = true
-# extension.syncsource = true
+extension.eventsource = false
+extension.harvesting = false
+extension.syncsource = false
 
 # common extensions
 extension.diagnostics = true

@@ -5,7 +5,7 @@ apiPort = {{api_port}}
 shouldAllowAddressReuse = false
 shouldUseSingleThreadPool = false
 shouldUseCacheDatabaseStorage = {{should_use_cache_database_storage}}
-shouldEnableAutoSyncCleanup = {{should_enable_auto_sync_cleanup}}
+shouldEnableAutoSyncCleanup = false
 
 shouldEnableTransactionSpamThrottling = true
 transactionSpamThrottlingMaxBoostFee = 10'000'000
@@ -24,7 +24,7 @@ unconfirmedTransactionsCacheMaxResponseSize = 20MB
 unconfirmedTransactionsCacheMaxSize = 1'000'000
 
 connectTimeout = 10s
-syncTimeout = 60s
+syncTimeout = 120s
 
 socketWorkingBufferSize = 512KB
 socketWorkingBufferSensitivity = 100

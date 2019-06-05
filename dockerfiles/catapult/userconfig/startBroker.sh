@@ -8,4 +8,6 @@ ls -alh /data
 cd /data
 rm /data/startup/datadir-initialized
 
+sleep 4
+
 exec /catapult/bin/catapult.broker /userconfig
