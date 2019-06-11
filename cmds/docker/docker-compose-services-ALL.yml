@@ -23,16 +23,16 @@ services:
     command: bash -c "mongod --dbpath=/dbdata --bind_ip=db"
     stop_signal: SIGINT
     volumes:
-    - ./data/mongo:/dbdata:rw
-    - ./bin/bash:/bin-mount
+    - ../../data/mongo:/dbdata:rw
+    - ../../bin/bash:/bin-mount
 
   init-db:
     image: mongo
     command:  bash -c "/bin/bash /userconfig/mongors.sh"
     volumes:
-    - ./data/mongo:/dbdata:rw
-    - ./static-config/mongo/:/userconfig/:ro
-    - ./bin/bash:/bin-mount
+    - ../../data/mongo:/dbdata:rw
+    - ../../static-config/mongo/:/userconfig/:ro
+    - ../../bin/bash:/bin-mount
     depends_on:
     - db
 
@@ -42,9 +42,9 @@ services:
     ports:
     - "3000:3000"
     volumes:
-    - ./build/catapult-config/rest-gateway-0/userconfig/:/userconfig/
-    - ./bin/ash:/bin-mount
-    - ./build/state:/state
+    - ../../build/catapult-config/rest-gateway-0/userconfig/:/userconfig/
+    - ../../bin/ash:/bin-mount
+    - ../../build/state:/state
     depends_on:
     - init-db
 
@@ -53,20 +53,20 @@ services:
     command: bash -c "/bin-mount/wait /state/peer-node-0-nemgen && /bin/bash /userconfig/startServer.sh"
     stop_signal: SIGINT
     volumes:
-    - ./build/catapult-config/peer-node-0/userconfig/resources/:/userconfig/resources/
-    - ./data/peer-node-0:/data:rw
-    - ./bin/bash:/bin-mount
-    - ./build/state:/state
+    - ../../build/catapult-config/peer-node-0/userconfig/resources/:/userconfig/resources/
+    - ../../data/peer-node-0:/data:rw
+    - ../../bin/bash:/bin-mount
+    - ../../build/state:/state
 
   peer-node-0-tools:
     image: techbureau/catapult-tools-private:gcc
     command: ["sleep","1000000"]
     stop_signal: SIGINT
     volumes:
-    - ./build/catapult-config/peer-node-0/userconfig/resources/:/userconfig/resources/
-    - ./data/peer-node-0:/data:rw
-    - ./bin/bash:/bin-mount
-    - ./build/state:/state
+    - ../../build/catapult-config/peer-node-0/userconfig/resources/:/userconfig/resources/
+    - ../../data/peer-node-0:/data:rw
+    - ../../bin/bash:/bin-mount
+    - ../../build/state:/state
     depends_on:
     - peer-node-0
 
@@ -75,29 +75,29 @@ services:
     command: bash -c "/bin-mount/wait /state/peer-node-1-nemgen && /bin/bash /userconfig/startServer.sh"
     stop_signal: SIGINT
     volumes:
-    - ./build/catapult-config/peer-node-1/userconfig/resources/:/userconfig/resources/
-    - ./data/peer-node-1:/data:rw
-    - ./bin/bash:/bin-mount
-    - ./build/state:/state
+    - ../../build/catapult-config/peer-node-1/userconfig/resources/:/userconfig/resources/
+    - ../../data/peer-node-1:/data:rw
+    - ../../bin/bash:/bin-mount
+    - ../../build/state:/state
 
   api-node-0:
     build: dockerfiles/catapult
     command: bash -c "/bin-mount/wait /state/api-node-0-nemgen && /bin/bash /userconfig/startApiServer.sh"
     stop_signal: SIGINT
     volumes:
-    - ./build/catapult-config/api-node-0/userconfig/resources/:/userconfig/resources/
-    - ./data/api-node-0:/data:rw
-    - ./bin/bash:/bin-mount
-    - ./build/state:/state
+    - ../../build/catapult-config/api-node-0/userconfig/resources/:/userconfig/resources/
+    - ../../data/api-node-0:/data:rw
+    - ../../bin/bash:/bin-mount
+    - ../../build/state:/state
 
   api-node-broker-0:
     build: dockerfiles/catapult
     command: bash -c "/bin-mount/wait /state/api-node-0 && /bin/bash /userconfig/startBroker.sh"
     stop_signal: SIGINT
     volumes:
-    - ./build/catapult-config/api-node-0/userconfig/resources/:/userconfig/resources/
-    - ./data/api-node-0:/data:rw
-    - ./bin/bash:/bin-mount
-    - ./build/state:/state
+    - ../../build/catapult-config/api-node-0/userconfig/resources/:/userconfig/resources/
+    - ../../data/api-node-0:/data:rw
+    - ../../bin/bash:/bin-mount
+    - ../../build/state:/state
     depends_on:
     - api-node-0

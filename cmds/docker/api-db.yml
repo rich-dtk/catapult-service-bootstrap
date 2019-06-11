@@ -15,14 +15,21 @@
 
 version: '2'
 services:
-
-  api-node-0-recover:
-    build: dockerfiles/catapult
-    command: bash -c "/bin-mount/wait /state/api-node-0-nemgen && /bin/bash /userconfig/runServerRecover.sh"
+  db:
+    image: mongo
+    command: bash -c "mongod --dbpath=/dbdata --bind_ip=db"
     stop_signal: SIGINT
     volumes:
-    - ./build/catapult-config/api-node-0/userconfig/resources/:/userconfig/resources/
-    - ./data/api-node-0:/data:rw
-    - ./bin/bash:/bin-mount
-    - ./build/state:/state
+    - ../../data/mongo:/dbdata:rw
+    - ../../bin/bash:/bin-mount
+
+  init-db:
+    image: mongo
+    command:  bash -c "/bin/bash /userconfig/mongors.sh"
+    volumes:
+    - ../../data/mongo:/dbdata:rw
+    - ../../static-config/mongo/:/userconfig/:ro
+    - ../../bin/bash:/bin-mount
+    depends_on:
+    - db
 
