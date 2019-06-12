@@ -16,7 +16,7 @@ There is a new cmds/ folder that has all the "commands" to run, this includes th
  1) ./cmds/setup-network          (create the nemesis and configs for a 2 peer, one api node network
  2) ./cmds/start-catapult-peers   (starts the peer-0 and peer-1 serverices in the foreground)
  3) ./cmds/start-api-db           (starts the mongo db as a detached background process)
- 4) ./cmds/start-catapult-broker  (starts up just the api node broker)
+ 4) ./cmds/start-catapult-api-broker  (starts up just the api node broker)
  5) ./cmds/start-catapult-api     (starts the api node and the REST gateway)
 
 At this point the network should be setup and running, harvesting is set to happen on peer 0, peer 1 and api node should sync blocks being produced, with the broker emitting messages that it is preparing to process messages. You should be able to see blocks via a `curl localhost:3000/block/xxx` request for any that have been produced.
