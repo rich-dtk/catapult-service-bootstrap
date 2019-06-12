@@ -26,7 +26,7 @@ At this point the network should be setup and running, harvesting is set to happ
  1) ctrl-c gracefull stop of the broker
  2) ctrl-c gracefull stop of the api + rest gateway
  3) `ls data/api-node-0` to verify there is no server.lock or broker.lock file, which means services shut down okay
- 4) ./cmds/start-catapult-broker
+ 4) ./cmds/start-catapult-api-broker
  5) ./cmds/start-catapult-api
 
 NOTE: observe the output of the broker log/console, see if it processes any new messages, in testing it appears 2 log messages about processing will be emitted and that is all, no new data written to mongo so is not accessible via the REST gateway
