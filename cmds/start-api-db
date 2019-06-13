@@ -3,7 +3,7 @@
 build_param=$1
 
 if [ "$build_param" == "--build" ]; then
-  docker-compose -f cmds/docker/api-db.yml up -d --build
+  docker-compose -f cmds/docker/api-db.yml up --build
 else
-  docker-compose -f cmds/docker/api-db.yml up -d
+  docker-compose -f cmds/docker/api-db.yml up
 fi
