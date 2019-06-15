@@ -46,8 +46,8 @@ maxTrackedNodes = 5'000
 
 [localnode]
 
-host = {{host}}
-friendlyName = {{friendly_name}}
+host = 
+friendlyName = 
 version = 0
 roles = Api
 

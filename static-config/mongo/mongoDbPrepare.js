@@ -1,5 +1,7 @@
 (function prepareDbConfiguration() {
 	db.setProfilingLevel(1, 100); // log slow queries
+
+	load('setMongoDebugLevels-5');
 })();
 
 (function prepareDbCollections() {
