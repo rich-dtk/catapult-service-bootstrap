@@ -2,8 +2,8 @@
 
 ulimit -c unlimited
 
-if [ -e "/state/api-node-broker" ]; then
-  rm -f /state/api-node-broker
+if [ -e "/state/api-node-0-broker" ]; then
+  rm -f /state/api-node-0-broker
 fi
 
 cd /catapult
@@ -12,6 +12,6 @@ ls -alh /data
 cd /data
 rm /data/startup/datadir-initialized
 
-touch /state/api-node-broker
+touch /state/api-node-0-broker
 
 exec /catapult/bin/catapult.broker /userconfig

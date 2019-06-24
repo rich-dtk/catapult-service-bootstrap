@@ -1,2 +1,2 @@
-FROM  techbureau/catapult-server-private:gcc-master-4079dad343
+FROM  techbureau/catapult-server:gcc-0.4.0.1
 ADD ./userconfig /userconfig
