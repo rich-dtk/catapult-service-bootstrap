@@ -30,7 +30,7 @@ services:
 
   api-node-0:
     build: dockerfiles/catapult
-    command: bash -c "/bin-mount/wait /state/api-node-broker && /bin/bash /userconfig/startApiServer.sh"
+    command: bash -c "/bin-mount/wait /state/api-node-0-broker && /bin/bash /userconfig/startApiServer.sh"
     stop_signal: SIGINT
     volumes:
     - ../../build/catapult-config/api-node-0/userconfig/resources/:/userconfig/resources/
