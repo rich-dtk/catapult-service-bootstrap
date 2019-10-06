@@ -6,8 +6,8 @@ maxIncomingConnectionsPerIdentity = 3
 
 enableAddressReuse = false
 enableSingleThreadPool = false
-enableCacheDatabaseStorage = {{enable_cache_database_storage}}
-enableAutoSyncCleanup = {{enable_auto_sync_cleanup}}
+enableCacheDatabaseStorage = true
+enableAutoSyncCleanup = false
 
 enableTransactionSpamThrottling = true
 transactionSpamThrottlingMaxBoostFee = 10'000'000
@@ -18,10 +18,10 @@ maxChainBytesPerSyncAttempt = 100MB
 shortLivedCacheTransactionDuration = 10m
 shortLivedCacheBlockDuration = 100m
 shortLivedCachePruneInterval = 90s
-shortLivedCacheMaxSize = 10'000'000
+shortLivedCacheMaxSize = 1'000'000
 
-minFeeMultiplier = 0
-transactionSelectionStrategy = oldest
+minFeeMultiplier = 100
+transactionSelectionStrategy = maximize-fee
 unconfirmedTransactionsCacheMaxResponseSize = 20MB
 unconfirmedTransactionsCacheMaxSize = 1'000'000
 
@@ -40,8 +40,8 @@ transactionElementTraceInterval = 10
 enableDispatcherAbortWhenFull = true
 enableDispatcherInputAuditing = true
 
-outgoingSecurityMode = None
-incomingSecurityModes = None
+outgoingSecurityMode = Signed
+incomingSecurityModes = None, Signed
 
 maxCacheDatabaseWriteBatchSize = 5MB
 maxTrackedNodes = 5'000

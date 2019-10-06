@@ -6,7 +6,7 @@ maxIncomingConnectionsPerIdentity = 3
 
 enableAddressReuse = false
 enableSingleThreadPool = false
-enableCacheDatabaseStorage = {{enable_cache_database_storage}}
+enableCacheDatabaseStorage = true
 enableAutoSyncCleanup = false
 
 enableTransactionSpamThrottling = true
@@ -18,10 +18,10 @@ maxChainBytesPerSyncAttempt = 100MB
 shortLivedCacheTransactionDuration = 10m
 shortLivedCacheBlockDuration = 100m
 shortLivedCachePruneInterval = 90s
-shortLivedCacheMaxSize = 10'000'000
+shortLivedCacheMaxSize = 1'000'000
 
-minFeeMultiplier = 0
-transactionSelectionStrategy = oldest
+minFeeMultiplier = 100
+transactionSelectionStrategy = maximize-fee
 unconfirmedTransactionsCacheMaxResponseSize = 20MB
 unconfirmedTransactionsCacheMaxSize = 1'000'000
 
@@ -40,8 +40,8 @@ transactionElementTraceInterval = 10
 enableDispatcherAbortWhenFull = true
 enableDispatcherInputAuditing = true
 
-outgoingSecurityMode = None
-incomingSecurityModes = None
+outgoingSecurityMode = Signed
+incomingSecurityModes = None, Signed
 
 maxCacheDatabaseWriteBatchSize = 5MB
 maxTrackedNodes = 5'000
@@ -52,8 +52,8 @@ localNetworks = 127.0.0.1
 
 [localnode]
 
-host = 
-friendlyName = 
+host = {{host}} 
+friendlyName = {{friendly_name}}
 version = 0
 roles = Api
 
