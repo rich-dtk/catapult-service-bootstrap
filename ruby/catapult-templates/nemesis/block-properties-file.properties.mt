@@ -11,24 +11,22 @@ cppFileHeader =
 [output]
 
 cppFile =
-binDirectory = ../seed/mijin-test
+binDirectory = ../seed/public-test
 
 [namespaces]
 
-cat = true
-cat.currency = true
-cat.harvest = true
+nem = true
+nem.xem = true
 
-[namespace>cat]
+[namespace>nem]
 
 duration = 0
 
 [mosaics]
 
-cat:currency = true
-cat:harvest = true
+nem:xem = true
 
-[mosaic>cat:currency]
+[mosaic>nem:xem]
 
 divisibility = 6
 duration = 0
@@ -37,21 +35,8 @@ isTransferable = true
 isSupplyMutable = false
 isRestrictable = false
 
-[distribution>cat:currency]
+[distribution>nem:xem]
 {{#cat_currency_distribution}}
 {{address}} = {{amount}}
 {{/cat_currency_distribution}}
 
-[mosaic>cat:harvest]
-
-divisibility = 3
-duration = 0
-supply = 15'000'000
-isTransferable = true
-isSupplyMutable = true
-isRestrictable = false
-
-[distribution>cat:harvest]
-{{#cat_harvest_distribution}}
-{{address}} = {{amount}}
-{{/cat_harvest_distribution}}
