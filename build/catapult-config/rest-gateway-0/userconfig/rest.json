@@ -9,7 +9,7 @@
     "allowedHosts": ["*"],
     "allowedMethods": ["GET", "POST", "PUT", "OPTIONS"]
   },
-  "clientPrivateKey": "BC80980A0456F4EAB75241AF5D9E9D0EFF7B7C900F2D6F3CC5C415B37BA31E12",
+  "clientPrivateKey": "2D0C38D7DDAF0891B91159EE8928E71BC574CF3C3ECB87C69A74034CE92B199B",
   "extensions": [
     "accountLink",
     "accountRestrictions",
@@ -37,7 +37,7 @@
   "apiNode": {
     "host": "api-node-0",
     "port": 7900,
-    "publicKey": "F5AC22762EA75FE5671AC55891700FA2BB757C461AA3870E669CA02B9075AE1D",
+    "publicKey": "9E38B3C3E8E0B448A763FB325FE035DDEECEC8E4CA66BD29CE8437367A6AE63C",
     "timeout": 1000
   },
 

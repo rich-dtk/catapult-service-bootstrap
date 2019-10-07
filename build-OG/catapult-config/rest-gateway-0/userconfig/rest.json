@@ -1,0 +1,73 @@
+{
+  "network": {
+    "name": "publicTest",
+    "description": "catapult development network"
+  },
+
+  "port": 3000,
+  "crossDomain": {
+    "allowedHosts": ["*"],
+    "allowedMethods": ["GET", "POST", "PUT", "OPTIONS"]
+  },
+  "clientPrivateKey": "BC80980A0456F4EAB75241AF5D9E9D0EFF7B7C900F2D6F3CC5C415B37BA31E12",
+  "extensions": [
+    "accountLink",
+    "accountRestrictions",
+    "aggregate",
+    "lockHash",
+    "lockSecret",
+    "mosaic",
+    "mosaicRestrictions",
+    "metadata",
+    "multisig",
+    "namespace",
+    "receipts",
+    "transfer"
+  ],
+  "db": {
+    "url": "mongodb://db:27017/",
+    "name": "catapult",
+    "pageSizeMin": 10,
+    "pageSizeMax": 100,
+    "pageSizeStep": 25,
+    "maxConnectionAttempts": 5,
+    "baseRetryDelay": 500
+  },
+
+  "apiNode": {
+    "host": "api-node-0",
+    "port": 7900,
+    "publicKey": "F5AC22762EA75FE5671AC55891700FA2BB757C461AA3870E669CA02B9075AE1D",
+    "timeout": 1000
+  },
+
+  "websocket": {
+    "mq": {
+      "host": "api-node-broker-0",
+      "port": 7902,
+      "monitorInterval": 500,
+      "connectTimeout": 10000,
+      "monitorLoggingThrottle": 60000
+    },
+    "allowOptionalAddress": true
+  },
+
+  "logging": {
+    "console": {
+      "formats": ["colorize", "simple"],
+
+      "level": "verbose",
+      "handleExceptions": true
+    },
+    "file": {
+      "formats": ["prettyPrint"],
+
+      "level": "verbose",
+      "handleExceptions": true,
+
+      "filename": "catapult-rest.log",
+      "maxsize": 20971520,
+      "maxFiles": 100
+    }
+  }
+}
