@@ -2,7 +2,7 @@
   "_info": "this file contains a list of api_node peers",
   "knownPeers": [
     {
-      "publicKey": "9E38B3C3E8E0B448A763FB325FE035DDEECEC8E4CA66BD29CE8437367A6AE63C",
+      "publicKey": "2847C32DFAF4D3D81DD7DE9854526BFA61D818ADA1582598354A2AF6A06CAFA0",
       "endpoint": {
         "host": "api-node-0",
         "port": 7900
