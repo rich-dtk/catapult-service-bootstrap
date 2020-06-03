@@ -2,7 +2,7 @@
 
 identifier = {{network_identifier}}
 nodeEqualityStrategy = host
-publicKey = {{network_public_key}}
+nemesisSignerPublicKey = {{network_public_key}}
 generationHashSeed = {{network_generation_hash}}
 epochAdjustment = 1573430400s
 
@@ -37,7 +37,7 @@ minVoterBalance = 50'000
 
 harvestBeneficiaryPercentage = 10
 harvestNetworkPercentage = 5
-harvestNetworkFeeSinkPublicKey = FF5563F1C5824EE0CD868799FBE8744B46D5549973FDA499939C952D951494E4
+harvestNetworkFeeSinkAddress = SBPJ3LE4SF7Y25RCEC6MA5BXBP6W2TGB2XKMIDY
 
 blockPruneInterval = 360
 maxTransactionsPerBlock = 6'000
@@ -78,7 +78,7 @@ maxMosaicsPerAccount = 1'000
 maxMosaicDuration = 3650d
 maxMosaicDivisibility = 6
 
-mosaicRentalFeeSinkPublicKey = {{mosaic_rental_fee_sink_public_key}}
+mosaicRentalFeeSinkAddress = SBPJ3LE4SF7Y25RCEC6MA5BXBP6W2TGB2XKMIDY
 mosaicRentalFee = 500
 
 [plugin:catapult.plugins.multisig]
@@ -99,7 +99,7 @@ maxNamespaceDuration = 365d
 namespaceGracePeriodDuration = 30d
 reservedRootNamespaceNames = xem, nem, user, account, org, com, biz, net, edu, mil, gov, info
 
-namespaceRentalFeeSinkPublicKey = {{namespace_rental_fee_sink_public_key}}
+namespaceRentalFeeSinkAddress = SBPJ3LE4SF7Y25RCEC6MA5BXBP6W2TGB2XKMIDY
 rootNamespaceRentalFeePerBlock = 1
 childNamespaceRentalFee = 100
 
