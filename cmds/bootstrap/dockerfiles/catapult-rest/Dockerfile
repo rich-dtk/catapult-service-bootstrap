@@ -1,1 +1,1 @@
-FROM techbureau/catapult-rest-server-nightly:commit-59114df
+FROM techbureau/catapult-rest-server-nightly:commit-e28c8ac
