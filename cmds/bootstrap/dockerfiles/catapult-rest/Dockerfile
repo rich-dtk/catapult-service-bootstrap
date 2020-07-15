@@ -1,1 +1,1 @@
-FROM symbolplatform/symbol-rest-nightly:96test-commit-9ac580f
+FROM symbolplatform/symbol-rest-nightly:commit-5eb7eac
