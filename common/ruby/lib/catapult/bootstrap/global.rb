@@ -54,7 +54,7 @@ module Catapult::Bootstrap
       CATAPULT_NETWORK_IDENTIFIER 
     end
 
-    NUM_GENERATED_ADDRESSES = 53
+    NUM_GENERATED_ADDRESSES = 100
     def self.num_generated_addresses
       NUM_GENERATED_ADDRESSES
     end

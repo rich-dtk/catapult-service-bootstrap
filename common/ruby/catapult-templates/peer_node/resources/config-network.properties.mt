@@ -12,7 +12,7 @@ enableVerifiableState = {{enable_verifiable_state}}
 enableVerifiableReceipts = {{enable_verifiable_receipts}}
 
 currencyMosaicId = {{{currency_mosaic_id}}}
-harvestingMosaicId = {{{harvesting_mosaic_id}}}
+harvestingMosaicId = {{{currency_mosaic_id}}}
 
 blockGenerationTargetTime = 15s
 blockTimeSmoothingFactor = 3000
@@ -31,7 +31,7 @@ initialCurrencyAtomicUnits = 8'998'999'998'000'000
 maxMosaicAtomicUnits = 9'000'000'000'000'000
 
 totalChainImportance = {{{total_chain_importance}}}
-minHarvesterBalance = 500
+minHarvesterBalance = 10'000'000'000
 maxHarvesterBalance = 50'000'000'000'000
 minVoterBalance = 50'000
 
@@ -45,7 +45,7 @@ harvestNetworkPercentage = 5
 harvestNetworkFeeSinkAddress = SBPJ3LE4SF7Y25RCEC6MA5BXBP6W2TGB2XKMIDY
 
 blockPruneInterval = 360
-maxTransactionsPerBlock = 6'000
+maxTransactionsPerBlock = 1'500
 
 [plugin:catapult.plugins.accountlink]
 
@@ -99,7 +99,7 @@ maxChildNamespaces = 256
 maxNamespaceDepth = 3
 
 # *approximate* days based on blockGenerationTargetTime
-minNamespaceDuration = 1m
+minNamespaceDuration = 30d
 maxNamespaceDuration = 365d
 namespaceGracePeriodDuration = 30d
 reservedRootNamespaceNames = xem, nem, user, account, org, com, biz, net, edu, mil, gov, info

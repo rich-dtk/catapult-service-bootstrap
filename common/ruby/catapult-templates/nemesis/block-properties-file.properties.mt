@@ -18,43 +18,31 @@ transactionsDirectory = {{transactions_directory}}
 
 [namespaces]
 
-{{base_namespace}} = true
-{{base_namespace}}.{{mosaic_name.currency}} = true
-{{base_namespace}}.{{mosaic_name.harvesting}} = true
+symbol = true
+symbol.xym = true
 
-[namespace>{{base_namespace}}]
+[namespace>symbol]
 
 duration = 0
 
 [mosaics]
 
-{{base_namespace}}:{{mosaic_name.currency}} = true
-{{base_namespace}}:{{mosaic_name.harvesting}} = true
+symbol:xym = true
 
-[mosaic>{{base_namespace}}:{{mosaic_name.currency}}]
+[mosaic>symbol:xym]
 
 divisibility = 6
 duration = 0
-supply = 8'998'999'998'000'000
+supply = 7'831'975'436'000'000
 isTransferable = true
 isSupplyMutable = false
 isRestrictable = false
 
-[distribution>{{base_namespace}}:{{mosaic_name.currency}}]
+[distribution>symbol:xym]
 {{#currency_distribution}}
 {{address}} = {{amount}}
 {{/currency_distribution}}
 
-[mosaic>{{base_namespace}}:{{mosaic_name.harvesting}}]
-
-divisibility = 3
-duration = 0
-supply = 15'000'000
-isTransferable = true
-isSupplyMutable = true
-isRestrictable = false
-
-[distribution>{{base_namespace}}:{{mosaic_name.harvesting}}]
 {{#harvesting_distribution}}
 {{address}} = {{amount}}
 {{/harvesting_distribution}}

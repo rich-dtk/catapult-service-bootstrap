@@ -19,8 +19,8 @@ if [ ! -d /data/00000 ]; then
   ######## need to run twice and patch the mosaic ids
   # first time to get cat.harvest nad cat.currency
   /usr/catapult/bin/catapult.tools.nemgen  --resources /userconfig/ --nemesisProperties /nemesis/block-properties-file.properties 2> /tmp/nemgen.log
-  harvesting_mosaic_id=$(grep "cat.harvest" /tmp/nemgen.log | grep nonce  | awk -F=  '{split($0, a, / /); print a[9]}' | sort -u)
-  currency_mosaic_id=$(grep "cat.currency" /tmp//nemgen.log | grep nonce  | awk -F=  '{split($0, a, / /); print a[9]}' | sort -u)
+  harvesting_mosaic_id=$(grep "symbol.xym" /tmp/nemgen.log | grep nonce  | awk -F=  '{split($0, a, / /); print a[9]}' | sort -u)
+  currency_mosaic_id=$(grep "symbol.xym" /tmp//nemgen.log | grep nonce  | awk -F=  '{split($0, a, / /); print a[9]}' | sort -u)
 
   # second time after replacing values for currencyMosaicId and harvestingMosaicId
   sed -i "s/^harvestingMosaicId = .*/harvestingMosaicId = $(config_form ${harvesting_mosaic_id})/" /userconfig/resources/config-network.properties
